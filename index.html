@@ -3,60 +3,186 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Dolan Software | Fast Websites and Online Ordering for Local Businesses</title>
-<meta name="description" content="Dolan Software builds fast business websites, online ordering and QR menus, and custom business software for restaurants, salons and local shops in Chestermere and Calgary. No commission. You own everything.">
+<title>Dolan Software — Websites that take orders | Chestermere, Alberta</title>
+<meta name="description" content="Dolan Software builds fast websites and QR ordering for restaurants, salons and local shops in Chestermere and Calgary. No commission. Live in 7 days. You own everything.">
+<meta property="og:title" content="Dolan Software — Websites that take orders">
+<meta property="og:description" content="Fast websites and QR ordering for local businesses. No commission. Live in 7 days.">
+<meta property="og:image" content="https://dolansoftware.com/assets/restaurantos-home.png">
+<link rel="icon" type="image/png" href="dolan-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-  :root{--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--indigo:#4f46e5;--indigo-dark:#4338ca;--bg:#ffffff;--soft:#f8fafc}
+  :root{
+    --ink:#0b0b0c; --muted:#55565a; --line:#e4e4e7; --soft:#f4f4f5;
+    --accent:#4f46e5; --accent-dark:#4338ca;
+    --serif:Georgia,'Times New Roman',serif;
+    --sans:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  }
   *{box-sizing:border-box}
-  body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-  a{color:var(--indigo);text-decoration:none}
-  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
-  header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:19px;color:var(--ink)}
-  .brand img{width:36px;height:36px}
-  .nav-links{display:flex;gap:22px;font-size:15px}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:var(--sans);color:var(--ink);background:#fff;line-height:1.6;-webkit-font-smoothing:antialiased}
+  ::selection{background:var(--accent);color:#fff}
+  a{color:var(--accent);text-decoration:none}
+  img{display:block;max-width:100%}
+  section{scroll-margin-top:90px}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+  .serif{font-family:var(--serif)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;color:var(--ink);letter-spacing:-.01em}
+  .brand img{width:34px;height:34px}
+  .nav-links{display:flex;gap:26px;font-size:14.5px;font-weight:500}
   .nav-links a{color:var(--muted)}
   .nav-links a:hover{color:var(--ink)}
-  .btn{display:inline-block;background:var(--indigo);color:#fff;font-weight:700;padding:12px 24px;border-radius:10px;font-size:15px}
-  .btn:hover{background:var(--indigo-dark)}
-  .btn-ghost{display:inline-block;border:1.5px solid var(--line);color:var(--ink);font-weight:700;padding:11px 22px;border-radius:10px;font-size:15px;background:#fff}
-  .hero{padding:72px 0 56px;text-align:center}
-  .hero h1{font-size:44px;line-height:1.15;margin:0 0 16px;letter-spacing:-1px}
-  .hero p{font-size:18px;color:var(--muted);max-width:640px;margin:0 auto 28px}
-  .hero .cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-  .hero .note{font-size:14px;color:var(--muted);margin-top:18px}
-  section{padding:56px 0}
-  .soft{background:var(--soft)}
-  h2{font-size:30px;line-height:1.25;margin:0 0 8px;letter-spacing:-.5px}
-  .sub{color:var(--muted);font-size:17px;margin:0 0 32px;max-width:640px}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
-  .card h3{font-size:20px;margin:0 0 8px}
-  .card p{color:var(--muted);font-size:15px;margin:0 0 14px}
-  .price{font-size:15px;font-weight:700;color:var(--ink)}
-  .price span{color:var(--muted);font-weight:400}
-  .demo{background:#0f172a;color:#fff;border-radius:18px;padding:44px 36px;text-align:center}
-  .demo h2{color:#fff}
-  .demo p{color:#cbd5e1;font-size:17px;max-width:560px;margin:0 auto 26px}
-  .demo .btn{background:#6366f1}
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
-  .step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:26px}
-  .step .num{width:36px;height:36px;border-radius:50%;background:var(--indigo);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
-  .step h3{font-size:18px;margin:0 0 6px}
-  .step p{color:var(--muted);font-size:15px;margin:0}
-  .why{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-  .why div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px 22px}
-  .why h3{font-size:17px;margin:0 0 4px}
-  .why p{color:var(--muted);font-size:15px;margin:0}
-  .contact{text-align:center}
-  .contact .email{font-size:22px;font-weight:800;color:var(--indigo)}
-  footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:14px;text-align:center}
-  @media(max-width:760px){
-    .hero h1{font-size:32px}
-    .grid,.steps,.why{grid-template-columns:1fr}
+  .nav-cta{background:var(--accent);color:#fff;font-weight:700;font-size:14.5px;padding:9px 18px;border-radius:999px}
+  .nav-cta:hover{background:var(--accent-dark);color:#fff}
+
+  /* hero — type only, left, one CTA */
+  .hero{padding:88px 0 64px}
+  .kicker{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 22px}
+  .kicker b{color:var(--accent)}
+  h1{font-family:var(--serif);font-size:clamp(56px,9.5vw,116px);line-height:.98;letter-spacing:-.03em;margin:0 0 26px;font-weight:700}
+  h1 em{font-style:italic;color:var(--accent)}
+  .hero p.lede{font-size:19px;line-height:1.55;color:var(--muted);max-width:620px;margin:0 0 30px}
+  .hero .cta-row{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:16px;padding:15px 30px;border-radius:999px}
+  .btn:hover{background:var(--accent-dark)}
+  .hero .facts{display:flex;gap:0;flex-wrap:wrap;margin-top:44px;border-top:1px solid var(--line)}
+  .hero .facts div{padding:16px 28px 0 0;margin-right:28px;border-right:1px solid var(--line);padding-right:28px}
+  .hero .facts div:last-child{border-right:0}
+  .hero .facts b{display:block;font-size:17px;letter-spacing:-.01em}
+  .hero .facts span{font-size:13.5px;color:var(--muted)}
+
+  /* ticker */
+  .ticker{background:var(--ink);color:#fff;overflow:hidden;padding:15px 0;white-space:nowrap}
+  .ticker .track{display:inline-block;animation:tick 26s linear infinite;font-weight:700;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+  .ticker .track span{color:var(--accent);padding:0 14px}
+  @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* statement */
+  .statement{padding:110px 0 90px}
+  .statement p{font-family:var(--serif);font-size:clamp(30px,4.2vw,52px);line-height:1.2;letter-spacing:-.02em;max-width:960px;margin:0}
+  .statement p em{font-style:italic;color:var(--accent)}
+
+  /* work */
+  .work{padding:20px 0 90px}
+  .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-top:1px solid var(--ink);padding-top:18px;margin-bottom:48px}
+  .sec-head h2{font-family:var(--serif);font-size:clamp(38px,5vw,64px);line-height:1.02;letter-spacing:-.02em;margin:0}
+  .sec-head p{color:var(--muted);font-size:15.5px;margin:0;max-width:340px;text-align:right}
+  .project{margin-bottom:88px}
+  .project:last-child{margin-bottom:0}
+  .project figure{margin:0;border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:zoom-in;background:var(--soft)}
+  .project figure img{width:100%;height:auto;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+  .project figure:hover img{transform:scale(1.015)}
+  .project figure.wide img{aspect-ratio:16/9;object-fit:cover;object-position:top}
+  .project .cap{display:grid;grid-template-columns:1fr 1.4fr;gap:28px;padding:26px 4px 0}
+  .project .cap h3{font-family:var(--serif);font-size:32px;line-height:1.1;letter-spacing:-.02em;margin:0}
+  .project .cap .tags{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:8px 0 0}
+  .project .cap p{color:var(--muted);font-size:16px;margin:0 0 12px}
+  .project .cap ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+  .project .cap li{font-size:13.5px;font-weight:600;border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+  .project.split{display:grid;grid-template-columns:1.15fr 1fr;gap:40px;align-items:center}
+  .project.split.flip{grid-template-columns:1fr 1.15fr}
+  .project.split figure img{aspect-ratio:4/3.4;object-fit:cover;object-position:top}
+  .project.split .cap{display:block;padding:0}
+  .project.split .cap h3{font-size:36px}
+  .zoom-hint{font-size:13px;color:var(--muted);margin-top:10px}
+
+  /* services — indexed list */
+  .services{padding:90px 0}
+  .svc{border-top:1px solid var(--ink);padding:30px 0;display:grid;grid-template-columns:80px 1fr 260px;gap:24px;align-items:baseline}
+  .svc:last-child{border-bottom:1px solid var(--ink)}
+  .svc .num{font-family:var(--serif);font-size:26px;color:var(--accent)}
+  .svc h3{font-family:var(--serif);font-size:clamp(26px,3.2vw,38px);line-height:1.1;letter-spacing:-.02em;margin:0 0 8px}
+  .svc p{color:var(--muted);font-size:16px;margin:0;max-width:560px}
+  .svc .price{text-align:right}
+  .svc .price b{font-size:20px;letter-spacing:-.01em;display:block}
+  .svc .price span{font-size:13.5px;color:var(--muted)}
+
+  /* calculator */
+  .calc-wrap{padding:10px 0 90px}
+  .calc{background:var(--soft);border-radius:22px;padding:44px 40px}
+  .calc h2{font-family:var(--serif);font-size:clamp(28px,3.6vw,44px);line-height:1.08;letter-spacing:-.02em;margin:0 0 10px}
+  .calc>p{color:var(--muted);font-size:16px;margin:0 0 28px;max-width:560px}
+  .calc .fields{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:26px}
+  .calc label{display:block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .calc input{width:100%;font:inherit;font-size:20px;font-weight:700;padding:13px 16px;border:1.5px solid var(--line);border-radius:12px;background:#fff;color:var(--ink)}
+  .calc input:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+  .calc .result{border-top:1px solid var(--line);padding-top:22px;font-size:19px;line-height:1.5}
+  .calc .result b{color:var(--accent)}
+  .calc .fine{font-size:13.5px;color:var(--muted);margin-top:12px}
+
+  /* offer — dark */
+  .offer{background:var(--ink);color:#fff;padding:96px 0}
+  .offer h2{font-family:var(--serif);font-size:clamp(36px,5vw,64px);line-height:1.04;letter-spacing:-.02em;margin:0 0 18px;max-width:820px}
+  .offer h2 em{font-style:italic;color:#818cf8}
+  .offer>p{color:#c6c6ca;font-size:17.5px;max-width:620px;margin:0 0 40px}
+  .offer .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:44px}
+  .offer .step{border-top:1px solid #2e2e33;padding-top:18px}
+  .offer .step b{font-family:var(--serif);font-size:24px;color:#818cf8}
+  .offer .step h3{font-size:17px;margin:10px 0 6px}
+  .offer .step p{color:#c6c6ca;font-size:15px;margin:0}
+  .offer .btn{background:#fff;color:var(--ink)}
+  .offer .btn:hover{background:#e4e4e7}
+
+  /* faq */
+  .faq{padding:90px 0}
+  .faq .inner{max-width:760px}
+  .faq h2{font-family:var(--serif);font-size:clamp(34px,4.4vw,54px);line-height:1.05;letter-spacing:-.02em;margin:0 0 34px}
+  .faq details{border-top:1px solid var(--line);padding:20px 0}
+  .faq details:last-child{border-bottom:1px solid var(--line)}
+  .faq summary{cursor:pointer;font-weight:700;font-size:18px;letter-spacing:-.01em;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{content:"+";color:var(--accent);font-size:22px;line-height:1}
+  .faq details[open ] summary::after{content:"–"}
+  .faq details p{color:var(--muted);font-size:16px;margin:14px 0 4px;max-width:640px}
+
+  /* contact */
+  .contact{padding:90px 0 110px;text-align:left}
+  .contact h2{font-family:var(--serif);font-size:clamp(52px,8.5vw,104px);line-height:1;letter-spacing:-.03em;margin:0 0 26px}
+  .contact h2 em{font-style:italic;color:var(--accent)}
+  .contact .mail{font-size:clamp(22px,3.4vw,36px);font-weight:800;letter-spacing:-.02em;color:var(--accent);border-bottom:3px solid var(--accent);padding-bottom:2px}
+  .contact p{color:var(--muted);font-size:16px;margin:26px 0 0}
+
+  footer{border-top:1px solid var(--line);padding:26px 0}
+  footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+  footer a{color:var(--muted)}
+
+  /* lightbox */
+  .lb{position:fixed;inset:0;background:rgba(10,10,12,.92);display:none;align-items:center;justify-content:center;z-index:100;padding:24px}
+  .lb.open{display:flex}
+  .lb img{max-width:min(1100px,94vw);max-height:84vh;border-radius:12px;background:#fff}
+  .lb .cap{position:absolute;left:0;right:0;bottom:22px;text-align:center;color:#fff;font-size:14.5px}
+  .lb button{position:absolute;top:18px;right:20px;background:#fff;color:var(--ink);border:0;font:inherit;font-weight:700;font-size:15px;padding:10px 18px;border-radius:999px;cursor:pointer}
+
+  /* reveals — content visible by default; hidden only when JS opts in and motion is allowed */
+  html.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  html.js .rv-img{opacity:0;transform:scale(.985);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+  html.js .rv.in,html.js .rv-img.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto}
+    .ticker .track{animation:none}
+    html.js .rv,html.js .rv-img{opacity:1;transform:none;transition:none}
+  }
+  @media(max-width:820px){
+    .wrap{padding:0 20px}
     .nav-links{display:none}
-    section{padding:40px 0}
+    .hero{padding:60px 0 48px}
+    .statement{padding:70px 0 60px}
+    .project .cap{grid-template-columns:1fr;gap:10px}
+    .project.split,.project.split.flip{grid-template-columns:1fr;gap:22px}
+    .project.split figure img{aspect-ratio:16/10}
+    .sec-head{flex-direction:column;gap:8px}
+    .sec-head p{text-align:left}
+    .svc{grid-template-columns:52px 1fr;gap:14px}
+    .svc .price{grid-column:2;text-align:left;margin-top:6px}
+    .calc{padding:32px 22px}
+    .calc .fields{grid-template-columns:1fr}
+    .offer .steps{grid-template-columns:1fr}
+    .offer{padding:70px 0}
   }
 </style>
 </head>
@@ -64,111 +190,289 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#"><img src="dolan-logo.png" alt="Dolan Software logo"> Dolan Software</a>
+    <a class="brand" href="#"><img src="dolan-logo.png" alt="Dolan Software"> Dolan Software</a>
     <nav class="nav-links">
+      <a href="#work">Work</a>
       <a href="#services">Services</a>
-      <a href="#how">How it works</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
+      <a href="#calculator">Calculator</a>
+      <a href="#faq">FAQ</a>
     </nav>
+    <a class="nav-cta" href="mailto:info@dolansoftware.com">Email us</a>
   </div>
 </header>
 
 <main>
-  <div class="wrap hero">
-    <h1>Your business, online in 7 days.</h1>
-    <p>Fast websites and online ordering for restaurants, salons, barbershops and local shops in Chestermere and Calgary. No commission. You own everything.</p>
-    <div class="cta">
-      <a class="btn" href="#demo">See the live demo</a>
-      <a class="btn-ghost" href="mailto:info@dolansoftware.com">Email us</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <p class="kicker">Dolan Software — <b>Chestermere, Alberta</b></p>
+      <h1>Websites that<br>take <em>orders.</em></h1>
+      <p class="lede">We build fast websites and QR ordering for restaurants, salons and local shops in Chestermere and Calgary. No commission. You own everything.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:info@dolansoftware.com?subject=New%20project%20—%20Dolan%20Software">Email us to start</a>
+      </div>
+      <div class="facts">
+        <div><b>Live in 7 days</b><span>Fixed price, fixed date</span></div>
+        <div><b>No commission</b><span>Flat monthly price only</span></div>
+        <div><b>You own everything</b><span>Site, menu &amp; customer data</span></div>
+      </div>
     </div>
-    <p class="note">Built in Chestermere, Alberta &middot; Fixed prices, no surprises</p>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="track">No commission <span>✳</span> Live in 7 days <span>✳</span> You own everything <span>✳</span> Free homepage mockup <span>✳</span> No commission <span>✳</span> Live in 7 days <span>✳</span> You own everything <span>✳</span> Free homepage mockup <span>✳</span>&nbsp;</div>
   </div>
 
-  <section id="services" class="soft">
+  <!-- STATEMENT -->
+  <section class="statement">
     <div class="wrap">
-      <h2>What we build</h2>
-      <p class="sub">Three services, one goal: your customers find you, order from you, and come back.</p>
-      <div class="grid">
-        <div class="card">
+      <p class="rv">Every order through a delivery app sends part of your sale to someone else. <em>We build you a way out.</em></p>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="rv">Selected work</h2>
+        <p class="rv">Real products, built and shipped — not mockups. Click any screenshot to enlarge it.</p>
+      </div>
+
+      <article class="project">
+        <figure class="wide rv-img" data-full="assets/restaurantos-home.png" data-cap="RestaurantOS — customer ordering, live">
+          <img src="assets/restaurantos-home.png" alt="RestaurantOS — Run your restaurant from one system, with a phone showing the Demo Diner QR menu" loading="lazy">
+        </figure>
+        <div class="cap">
+          <div>
+            <h3>RestaurantOS</h3>
+            <p class="tags">SaaS · Restaurants</p>
+          </div>
+          <div>
+            <p>Online ordering and QR menus for restaurants — one system for the customer, the kitchen and the owner.</p>
+            <ul>
+              <li>Customer QR menu</li>
+              <li>Live kitchen display</li>
+              <li>Cashier &amp; waiter tools</li>
+              <li>English · العربية · Français</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="project split">
+        <figure class="rv-img" data-full="assets/uruk-home.png" data-cap="Uruk Academy — six school subjects, live">
+          <img src="assets/uruk-home.png" alt="Uruk Academy — online learning platform with six school subjects" loading="lazy">
+        </figure>
+        <div class="cap">
+          <h3>Uruk Academy</h3>
+          <p class="tags">Learning platform · Iraq</p>
+          <p style="margin-top:12px">An online learning platform with six school subjects — lessons, quizzes and exams, built for students in Iraq.</p>
+          <ul>
+            <li>6 subjects</li>
+            <li>Lessons &amp; quizzes</li>
+            <li>Ministerial exam prep</li>
+          </ul>
+          <p class="zoom-hint">Click the screenshot to enlarge it.</p>
+        </div>
+      </article>
+
+      <article class="project split flip">
+        <div class="cap">
+          <h3>Sahla</h3>
+          <p class="tags">Learning app · Beginners</p>
+          <p style="margin-top:12px">An English learning app in Arabic, for absolute beginners — built as a gift for my mother.</p>
+          <ul>
+            <li>Arabic-first lessons</li>
+            <li>From zero</li>
+            <li>Saved progress</li>
+          </ul>
+          <p class="zoom-hint">Click the screenshot to enlarge it.</p>
+        </div>
+        <figure class="rv-img" data-full="assets/sahla-home.png" data-cap="Sahla — English lessons from zero, in Arabic">
+          <img src="assets/sahla-home.png" alt="Sahla — English learning app, dedication to my mother, start learning button" loading="lazy">
+        </figure>
+      </article>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="rv">What we build</h2>
+        <p class="rv">Three services. One goal: your customers find you, order from you, and come back.</p>
+      </div>
+
+      <div class="svc">
+        <div class="num">01</div>
+        <div>
           <h3>Fast Business Websites</h3>
-          <p>A modern, mobile-first website for your business &mdash; menu, services, hours, location and contact, all in one place. Live in 7 days.</p>
-          <p class="price">$2,950&ndash;$3,950 <span>one-time &middot; care plans from $99/mo</span></p>
+          <p>A modern, mobile-first website — menu, services, hours, location and contact, all in one place. Live in 7 days.</p>
         </div>
-        <div class="card">
+        <div class="price"><b>$2,950–$3,950</b><span>one-time · care from $99/mo</span></div>
+      </div>
+
+      <div class="svc">
+        <div class="num">02</div>
+        <div>
           <h3>Online Ordering &amp; QR Menus</h3>
-          <p>Take orders directly from your own website and QR codes on your tables. Customers order, you get the order &mdash; no marketplace taking a cut of every sale.</p>
-          <p class="price">$199/mo <span>&middot; first 14 days free</span></p>
+          <p>Take orders directly from your own website and QR codes on your tables. Customers order, you get the order — no marketplace taking a cut of every sale.</p>
         </div>
-        <div class="card">
+        <div class="price"><b>$199/mo</b><span>first 14 days free</span></div>
+      </div>
+
+      <div class="svc">
+        <div class="num">03</div>
+        <div>
           <h3>Custom Business Software</h3>
-          <p>Ordering, booking and management systems built for how your business actually works &mdash; not a generic template forced on you.</p>
-          <p class="price">From $12,000 <span>&middot; scoped per project</span></p>
+          <p>Ordering, booking and management systems built for how your business actually works — not a generic template forced on you.</p>
         </div>
+        <div class="price"><b>From $12,000</b><span>scoped per project</span></div>
       </div>
     </div>
   </section>
 
-  <section id="demo">
+  <!-- CALCULATOR -->
+  <section class="calc-wrap" id="calculator">
     <div class="wrap">
-      <div class="demo">
-        <h2>See it working</h2>
-        <p>Try the live QR ordering demo &mdash; the same system we install for restaurants. Browse the menu, place an order, and watch it arrive on the kitchen screen.</p>
-        <a class="btn" href="https://restaurantos-dolanexeee.vercel.app">Open the live demo</a>
+      <div class="calc">
+        <h2 class="rv">How much are you paying in commission?</h2>
+        <p>Put in your own numbers. The math is yours, not ours.</p>
+        <div class="fields">
+          <div>
+            <label for="orders">Orders per month</label>
+            <input id="orders" type="number" min="0" value="300" inputmode="numeric">
+          </div>
+          <div>
+            <label for="avg">Average order ($)</label>
+            <input id="avg" type="number" min="0" value="25" inputmode="decimal">
+          </div>
+          <div>
+            <label for="pct">Commission (%)</label>
+            <input id="pct" type="number" min="0" max="100" value="20" inputmode="decimal">
+          </div>
+        </div>
+        <p class="result" id="calcResult"></p>
+        <p class="fine">Example values — change them to yours. Ordering with Dolan is a flat $199/mo, and the first 14 days are free.</p>
       </div>
     </div>
   </section>
 
-  <section id="how" class="soft">
+  <!-- OFFER -->
+  <section class="offer">
     <div class="wrap">
-      <h2>How it works</h2>
-      <p class="sub">No long meetings, no jargon. Three steps and you are live.</p>
+      <h2 class="rv">Not sure yet? We&rsquo;ll design your homepage <em>free.</em></h2>
+      <p>If you like it, we build the rest. If not, keep the design — no charge, no hard feelings.</p>
       <div class="steps">
-        <div class="step"><div class="num">1</div><h3>Tell us about your business</h3><p>Email us what you do, what you sell, and what you need. We reply within one business day.</p></div>
-        <div class="step"><div class="num">2</div><h3>We build it</h3><p>Your website and ordering system, built and tested. You review it before anything goes live.</p></div>
-        <div class="step"><div class="num">3</div><h3>You go live in 7 days</h3><p>Your site is live, your QR codes are printed, and your customers start ordering directly from you.</p></div>
+        <div class="step"><b>01</b><h3>Email us</h3><p>Your business name and what you sell. One email is enough.</p></div>
+        <div class="step"><b>02</b><h3>We design it</h3><p>Your homepage, designed for your business — not a template.</p></div>
+        <div class="step"><b>03</b><h3>You decide</h3><p>Like it and we build the rest. Don&rsquo;t, and the design is still yours.</p></div>
       </div>
+      <a class="btn" href="mailto:info@dolansoftware.com?subject=Free%20homepage%20mockup">Claim your free homepage</a>
     </div>
   </section>
 
-  <section>
+  <!-- FAQ -->
+  <section class="faq" id="faq">
     <div class="wrap">
-      <h2>Why Dolan Software</h2>
-      <p class="sub">Built by one specialist, not an agency that hands you to a junior.</p>
-      <div class="why">
-        <div><h3>No commission, ever</h3><p>Orders come straight to you. We charge a flat monthly price &mdash; we never take a percentage of your sales.</p></div>
-        <div><h3>You own everything</h3><p>Your website, your menu, your customer data. No lock-in, no hostage pricing.</p></div>
-        <div><h3>Fixed price, fixed date</h3><p>You know the price and the launch day before we start. No surprise invoices.</p></div>
-        <div><h3>Local, and reachable</h3><p>Based in Chestermere, serving Calgary and Alberta. When something needs fixing, you talk to the person who built it.</p></div>
+      <div class="inner">
+        <h2 class="rv">Questions, answered.</h2>
+        <details>
+          <summary>I already have a website. Can you add ordering to it?</summary>
+          <p>Yes. We can add ordering and QR menus to your existing site, or rebuild it if it is holding you back. Email us the link and we will tell you which makes sense.</p>
+        </details>
+        <details>
+          <summary>Do you take a percentage of my sales?</summary>
+          <p>No. Ordering is a flat $199 a month. We never take commission, and your customer data stays yours.</p>
+        </details>
+        <details>
+          <summary>What happens after the 14 free days?</summary>
+          <p>Ordering continues at $199 a month. Cancel anytime — your website, menu and data stay yours.</p>
+        </details>
+        <details>
+          <summary>How long until I&rsquo;m live?</summary>
+          <p>Websites go live in 7 days from when we start. Ordering is set up together with the site.</p>
+        </details>
+        <details>
+          <summary>Who do I talk to if something breaks?</summary>
+          <p>Me — the person who built it. Email info@dolansoftware.com and you get an answer from the builder, not a support queue.</p>
+        </details>
       </div>
     </div>
   </section>
 
-  <section id="pricing" class="soft">
+  <!-- CONTACT -->
+  <section class="contact">
     <div class="wrap">
-      <h2>Simple pricing</h2>
-      <p class="sub">One flat price per service. No per-order fees, no hidden charges.</p>
-      <div class="grid">
-        <div class="card"><h3>Website</h3><p>Your business online, live in 7 days.</p><p class="price">$2,950&ndash;$3,950 <span>one-time</span></p></div>
-        <div class="card"><h3>Ordering &amp; QR Menus</h3><p>Direct orders with zero commission.</p><p class="price">$199/mo <span>&middot; 14 days free</span></p></div>
-        <div class="card"><h3>Care plan</h3><p>Updates, fixes and support, every month.</p><p class="price">From $99/mo</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap contact">
-      <h2>Start with an email</h2>
-      <p class="sub" style="margin-left:auto;margin-right:auto">Tell us about your business and what you need. We reply within one business day with a clear price and a launch date.</p>
-      <a class="email" href="mailto:info@dolansoftware.com">info@dolansoftware.com</a>
-      <p style="color:var(--muted);margin-top:14px">Chestermere, Alberta, Canada</p>
+      <h2 class="rv">Let&rsquo;s build <em>yours.</em></h2>
+      <a class="mail" href="mailto:info@dolansoftware.com">info@dolansoftware.com</a>
+      <p>Chestermere, Alberta, Canada — serving Calgary and Alberta. We reply within one business day with a clear price and a launch date.</p>
+      <p style="margin-top:10px">Know a restaurant still paying commission? Forward them this page.</p>
     </div>
   </section>
 </main>
 
 <footer>
-  &copy; 2026 Dolan Software &middot; Chestermere, Alberta, Canada
+  <div class="wrap">
+    <span>© 2026 Dolan Software</span>
+    <span><a href="#work">Work</a> · <a href="#services">Services</a> · <a href="#faq">FAQ</a> · Chestermere, Alberta</span>
+  </div>
 </footer>
+
+<!-- lightbox -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Screenshot enlarged">
+  <button id="lbClose" type="button">Close ✕</button>
+  <img id="lbImg" src="" alt="">
+  <p class="cap" id="lbCap"></p>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduce){
+    document.documentElement.classList.add('js');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    },{threshold:.12});
+    document.querySelectorAll('.rv,.rv-img').forEach(function(el){ io.observe(el); });
+  }
+
+  /* commission calculator */
+  var o=document.getElementById('orders'), a=document.getElementById('avg'), p=document.getElementById('pct'), r=document.getElementById('calcResult');
+  function fmt(n){ return '$'+Math.round(n).toLocaleString('en-CA'); }
+  function calc(){
+    var orders=parseFloat(o.value)||0, avg=parseFloat(a.value)||0, pct=parseFloat(p.value)||0;
+    var comm=orders*avg*pct/100, keep=Math.max(0, comm-199);
+    if(comm<=0){ r.innerHTML='Enter your numbers above — the result appears here.'; return; }
+    r.innerHTML='You pay <b>'+fmt(comm)+' a month</b> in commission. With Dolan&rsquo;s flat $199/mo, you keep <b>'+fmt(keep)+' a month</b>.';
+  }
+  [o,a,p].forEach(function(el){ el.addEventListener('input', calc); });
+  calc();
+
+  /* lightbox */
+  var lb=document.getElementById('lb'), lbImg=document.getElementById('lbImg'), lbCap=document.getElementById('lbCap'), lbClose=document.getElementById('lbClose');
+  function openLb(fig){
+    lbImg.src=fig.getAttribute('data-full');
+    lbImg.alt=fig.querySelector('img').alt;
+    lbCap.textContent=fig.getAttribute('data-cap')||'';
+    lb.classList.add('open');
+    document.body.style.overflow='hidden';
+    lbClose.focus();
+  }
+  function closeLb(){ lb.classList.remove('open'); document.body.style.overflow=''; }
+  document.querySelectorAll('.project figure').forEach(function(fig){
+    fig.addEventListener('click', function(){ openLb(fig); });
+    fig.setAttribute('tabindex','0');
+    fig.setAttribute('role','button');
+    fig.setAttribute('aria-label','Enlarge screenshot');
+    fig.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openLb(fig); } });
+  });
+  lbClose.addEventListener('click', closeLb);
+  lb.addEventListener('click', function(e){ if(e.target===lb) closeLb(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLb(); });
+})();
+</script>
 
 </body>
 </html>
